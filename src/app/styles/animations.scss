@@ -1,0 +1,28 @@
+$stagger-interval: .2s;
+
+.animated {
+    @include mx_animationDuration(.75s);
+
+    &._fast {
+        @include mx_animationDuration(.5s);
+    }
+
+    &._medium {
+        @include mx_animationDuration(.75s);
+    }
+
+    &._slow {
+        @include mx_animationDuration(1s);
+    }
+
+    &._slower {
+        @include mx_animationDuration(1.5s);
+    }
+}
+
+@for $i from 1 through 20 {
+    ._#{$i} {
+        @include mx_animationDelay($i * $stagger-interval);
+    }
+}
+

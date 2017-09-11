@@ -1,0 +1,23 @@
+<section class="site-view">
+
+    <app-nav-bar klass="'fixed'" links="vm.links">
+        <nav-bar-right>
+            <a class="nav-item call-to-action show-for-large" href="#/app/{{$root.currentCompany.key}}/dashboard" ng-if="$root.currentUser">
+                <span class="cta-text">DASHBOARD</span>
+            </a>
+
+            <a class="nav-item call-to-action invert logout show-for-large" href="#/logout"  ng-show="$root.currentUser">
+                <span class="cta-text">Log out</span>
+            </a>
+
+            <app-hamburger  data-toggle="siteOffCanvas" klass="'hide-for-large'"></app-hamburger>
+
+        </nav-bar-right>
+    </app-nav-bar>
+
+    <!-- Page content -->
+    <div class="site-view-wrapper" ui-view></div>
+    <!-- Page content -->
+
+
+</section> <!-- site view -->

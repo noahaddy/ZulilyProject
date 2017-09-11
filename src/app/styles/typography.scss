@@ -1,0 +1,166 @@
+
+.section-title {
+    //text-transform: uppercase;
+    font-weight: 400;
+    @include mx-font-size(1.7rem, 2rem, 2.8rem);
+}
+
+.section-sub-title {
+    @include mx-font-size(1.4rem, 1.6rem, 1.8rem);
+    font-weight: 300;
+}
+
+.form-title {
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.form-sub-title {
+    text-transform: uppercase;
+    //color: $theme-secondary;
+    color: $theme;
+    //color: $theme-copy-secondary;
+    font-size: $mini-font-size; //1rem;
+    font-size: $body-font-size; //1rem;
+    font-weight: bold;
+    margin-bottom: .5rem; //1
+    margin-top: 2.5rem;
+    //letter-spacing: 1px;
+}
+
+.form-sub-sub-title {
+    text-transform: uppercase;
+    color: $theme-secondary;
+    //color: $theme;
+    //color: $theme-copy-secondary;
+    font-size: $mini-font-size; //1rem;
+    font-weight: bold;
+    margin-bottom: .5rem;
+    margin-top: 1.5rem;
+    //letter-spacing: 1px;
+}
+
+//REGULAR FONT SIZES
+.font-size-regular{
+    font-size: $font-size-regular;
+}
+
+.font-size-small{
+    font-size: $font-size-small;
+}
+
+.font-size-medium{
+    font-size: $font-size-medium;
+}
+
+.font-size-large{
+    font-size: $font-size-large;
+}
+
+//HEADING FONT SIZES
+.heading-xx-large {
+    font-size: $heading-xx-large;
+}
+
+.heading-x-large {
+    font-size: $heading-x-large;
+}
+
+.heading-large {
+    font-size: $heading-large;
+}
+
+.heading-medium {
+    font-size: $heading-medium;
+}
+
+.heading-small {
+    font-size: $heading-small;
+}
+
+.mini-font-size {
+    font-size: $mini-font-size;
+}
+
+.micro-font-size {
+    font-size: $micro-font-size
+}
+
+.bold {
+    font-weight: 600;
+}
+
+.small{
+    font-size: $font-size-small;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.ellipsify {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.mobile-legible {
+    font-weight: 400;
+
+    @include tablet {
+        font-weight: 300;
+    }
+}
+
+.list {
+    margin-left: 0;
+    list-style: none;
+
+    .form-title {
+        border-bottom: none;
+    }
+
+    li {
+        border-bottom: 1px solid $gray-light-3;
+
+        a {
+            display: block;
+            padding: 0.5rem 0.625rem 0.625rem 0;
+            color: $theme-anchor;
+
+            &:hover {
+                color: $theme;
+            }
+        }
+    }
+}
+
+.block-list{
+    list-style: none;
+    margin-left: 0;
+
+    li{
+        @include tablet {
+            width: 15%;
+        }
+        float: left;
+        margin: 0 1.5rem 1.5rem 0;
+
+        a{
+            border: 1px solid $theme;
+            display: block;
+            padding: 3rem 1rem;
+            text-align: center;
+            color: $theme;
+
+            &:hover{
+                background: $theme;
+                color: $white;
+            }
+
+        }
+    }
+
+}

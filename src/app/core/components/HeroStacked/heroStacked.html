@@ -1,0 +1,33 @@
+<section class="app-herostacked {{klass}} ">
+
+    <div class="content-wrapper  animated fadeInUp _slow">
+        <div class="intro" ng-show="ttl">{{intro}}</div>
+        <div class="title title-1 mobile-legible" ng-show="ttl"><span class="typed">{{ttl }}</span>&nbsp</div>
+        <div class="title title-2 mobile-legible" ng-show="ttl2">{{ttl2 }}</div>
+        <div class="sub-title" ng-show="subtitle">{{ subtitle }}</div>
+        <p class="text " ng-show="text">{{text}}</p>
+        <a class=" button cta primary {{ctaklass}}" ng-href="{{ctalink}}"  ng-show="cta">{{cta}} <span
+            class="cta-arrow">&raquo;</span></a>
+    </div>
+
+    <div class="image-wrapper animated fadeInUp _slow _2" ng-show="image">
+        <img ng-src="{{image}}" alt="">
+    </div>
+
+    <div class="multi-slot" ng-show="slots">
+        <div class="row full-width large-unstack">
+            <div class="column  small-12 large-3  align-bottom {{slots.leftClass}}">
+                <img ng-src="{{slots.left}}" class="animated fadeInLeft _slow _4"/>
+            </div>
+
+            <div class="column small-12 large-6   align-bottom {{slots.centerClass}}">
+                <img ng-src="{{slots.center}}" class="animated fadeInUp _slow _2"/></div>
+
+            <div class="column  small-12 large-3  align-bottom {{slots.rightClass}}">
+                <img ng-src="{{slots.right}}" class="animated fadeInRight _slow _5"/>
+            </div>
+        </div>
+    </div>
+
+
+</section>

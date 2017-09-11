@@ -1,0 +1,47 @@
+<app-page ttl="'Login Page'">
+
+
+
+    <form class="" ng-submit="vm.login()">
+
+        <p class="theme-alert " ng-show="vm.error">{{vm.error}}</p>
+
+        <section class="app-input">
+            <div class="row">
+                <div class="small-12 columns">
+                    <div class="label-wrapper">
+                        <label for="email">Email</label>
+                    </div>
+
+                    <div class="input-wrapper">
+                        <input id="email" type="email" placeholder="someone@email.com"
+                               ng-model="vm.creds.email" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="app-input">
+            <div class="row">
+                <div class="small-12 columns">
+                    <div class="label-wrapper">
+                        <label for="password">Password</label>
+                    </div>
+
+                    <div class="input-wrapper">
+                        <input id="password" type="password"
+                               ng-model="vm.creds.password" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <app-submit txt="'Log in'" klass="'primary buffer'"></app-submit>
+
+
+    </form>
+
+
+</app-page>

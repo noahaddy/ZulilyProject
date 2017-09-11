@@ -1,0 +1,103 @@
+
+.app-herostacked {
+    color: $gray-dark-1;
+
+    text-align: center;
+    padding: 3rem 2rem 0;
+    //background: $gray-light-3;
+    overflow: hidden;
+    //margin-bottom: 2rem;
+
+    @include desktop{
+        padding: 5rem 2rem 0;
+
+    }
+
+
+    .content-wrapper {
+        margin-bottom: 2rem;
+
+        @include desktop {
+            margin-bottom: 0;
+            //max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    .intro {
+        //font-size: 1.6rem;
+        //color: $gray-light-3
+        @include mx-font-size(1rem, 1.2rem, 1.4rem);
+        margin-bottom: .4rem;
+
+        font-weight: 400;
+
+        @include tablet {
+            font-weight: 300;
+        }
+    }
+
+    .title {
+        margin: 0 0 .1rem 0;
+        font-weight: 400;
+        //text-transform: uppercase;
+        //color: $white;
+        color: $theme-copy;
+        @include mx-font-size(1.6rem, 2.4rem, 3.3rem);
+    }
+
+    .title-1{
+        //text-transform: uppercase;
+       // @include mx-letter-spacing(0, 0, 2px);
+    }
+
+    .title-2{
+        //font-weight: 300;
+        //text-transform: none;
+        color: $theme-secondary;
+
+        @include mx-font-size(1.7rem, 1.9rem, 2.1rem);
+        margin-bottom: .5rem;
+    }
+
+    .sub-title {
+        @include mx-font-size(1rem, 1.1rem, 1.2rem);
+        margin-bottom: 1rem;
+        font-weight: 400;
+        color: $theme-copy;
+
+        // @include mx-letter-spacing(0, 0, 1px);
+    }
+
+    .text {
+        font-size: 1.1rem;
+        margin-bottom: .5rem;
+
+    }
+
+    .cta {
+       // color: $theme;
+        font-size: $body-font-size-2;
+        padding-right: 12px;
+
+        .cta-arrow {
+
+        }
+
+    }
+
+    //MULTI-SLOTS
+    .multi-slot {
+        margin-top: 2rem;
+    }
+
+
+    &.dark-theme{
+        color: $white;
+
+        .title, title-1, .title-2{
+            color: $white;
+        }
+    }
+}

@@ -1,0 +1,57 @@
+<section class="app-nav-bar {{$ctrl.klass}}">
+    <div class="row full-width collapse bar-wrapper align-middle align-justify">
+
+        <!--Nav Bar Left-->
+        <section class="column shrink">
+            <a href="#/home" class="site-title ">
+                <span class="title-1">PROJECT</span><span class="title-2">ZULILY</span>
+                <span class="current-user">{{$root.currentUser.name}}</span>
+            </a>
+            <div class="profile-box inline-block">
+                <app-loader></app-loader>
+
+            </div>
+        </section>
+
+        <!--Nav Bar Middle / Links-->
+        <section class="column  nav-bar-middle show-for-large">
+            <div class="nav-menu-container">
+                    <ul class="links-wrapper menu ">
+                        <li xng-if="link.url"  ng-repeat="link in $ctrl.links" class="">
+                            <a  ui-sref="{{link.url}}"
+                                ui-sref-active="{'active': 'app.' + link.entity }"
+                                class="nav-item {{link.klass}}"
+                                data-toggle="{{link.toggle}}"
+                            >{{link.title2}}</a>
+
+
+                        </li>
+                        <li>
+                            <a class="nav-item call-to-action " ng-href="#/home" >
+                                <span class="cta-text">Home</span>
+                            </a>
+                        </li>
+                    </ul>
+            </div>
+
+            <ng-transclude ng-transclude-slot="navBarMiddle"></ng-transclude>
+
+        </section>
+
+
+        <!--Nav Bar Right-->
+        <section class="column shrink nav-bar-right">
+
+            <a class="nav-item call-to-action sign-up show-for-large" href="#/app/signup" ng-hide="$root.currentUser">
+                <span class="cta-text">SIGN UP</span>
+            </a>
+            <a class="nav-item call-to-action invert show-for-large" href="#/app/login"  ng-hide="$root.currentUser">
+                <span class="cta-text">Log in</span>
+            </a>
+
+
+            <ng-transclude ng-transclude-slot="navBarRight"></ng-transclude>
+
+        </section>
+    </div>
+</section>

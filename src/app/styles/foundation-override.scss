@@ -1,0 +1,66 @@
+$primary-color: $theme;
+
+$anchor-color: $theme-copy; //$theme
+
+//#2199e8; //2199E8
+$secondary-color: $theme-copy-secondary;
+//was 777
+$success-color: $theme-success;
+$warning-color: $theme-warning;
+$alert-color: $theme-alert;
+
+$light-gray: $gray-light;
+//#e6e6e6;
+$medium-gray: $gray;
+//#cacaca;
+$dark-gray: $gray-dark;
+//#8a8a8a;
+
+$black: $theme-copy;
+//#0a0a0a;
+//$white: #fff; //#fefefe;
+
+// 1. FONTS
+// ---------
+
+$body-font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
+$global-font-size: .875rem; //was 87.5%
+$header-font-weight: 300;
+
+// 2. FORMS
+// ---------
+$input-font-size: 1rem;
+$input-shadow: none;
+$input-shadow-focus: none;
+$input-border-focus: 1px solid $primary-color;
+$form-label-font-size: $body-font-size;
+
+// 3. BUTTONS
+$button-background-hover: $theme;
+
+// 3. TOP BAR
+// ---------
+$topbar-background: $white;
+
+// MEDIA QUERY CLASSES
+$breakpoint-classes: (small medium large xlarge);
+
+//BADGE
+
+//OFF-CANVAS
+$offcanvas-transition-length: .65s;
+
+
+.orbit-container{
+    outline: none;
+}
+
+
+//REVEAL
+$reveal-border: none;
+
+
+
+
+
+

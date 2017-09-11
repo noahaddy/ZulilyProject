@@ -1,0 +1,65 @@
+<section class="app-page {{$ctrl.klass}}" ng-class="{'no-header': !$ctrl.ttl}">
+
+    <section class="page-wrapper">
+
+        <section class="page-header {{$ctrl.headerklass}}" ng-if="$ctrl.ttl">
+            <div class="badge" ng-if="$ctrl.badge">{{$ctrl.badge}}</div>
+            <div class="row full-width collapse ">
+                <div class="column">
+                    <div class="title {{$ctrl.ttlclass}} ellipsifyx">{{$ctrl.ttl}}
+                        <span class="microtext" ng-if="$ctrl.microtext">{{$ctrl.microtext}}</span>
+                    </div>
+                </div>
+
+                <div class="column shrink">
+
+                    <!--SIMPLE COMMANDS-->
+                    <div class="row collapse commands-container">
+                        <div class="column shrink" ng-repeat="command in $ctrl.commands">
+                            <a class="command {{command.klass}}" ng-href="{{command.url}}">
+                                {{command.text}}       <!--<div class="column shrink command-text">New Event</div>-->
+                            </a>
+                        </div>
+
+
+                        <!--CUSTOM COMMANDS-->
+                        <div class="column shrink custom-commands" ng-transclude="customCommands" xng-if="customCommands"></div>
+
+
+                        <!--PERMISSIONS-->
+                        <div class="column shrink">
+                            <a class="command icon-command edit-command" ng-click="$root.goToEdit()" title="Edit Item">
+                                <icon-edit></icon-edit>
+                            </a>
+                        </div>
+
+                        <div class="column shrink">
+                            <a class="command icon-command delete-command"  ng-click="$root.deleteItem({ callback: $ctrl.onDelete })" title="Delete Item" >
+                               <icon-delete></icon-delete>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="divider"></div>
+        <main class="page-content">
+            <!--<app-row>-->
+                <div ng-transclude></div>
+
+            <!--</app-row>-->
+                    <div class="end-of-form">END OF FORM</div>
+        </main>
+
+        <section class="footer-actions menu-centered">
+            <div class="divider"></div>
+           <ul class="menu horizontal">
+               <li><a href="">Lorem</a></li>
+               <li><a href="">Lorem</a></li>
+               <li><a href="">Lorem</a></li>
+           </ul>
+        </section>
+
+    </section>
+</section>

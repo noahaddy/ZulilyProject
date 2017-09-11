@@ -1,0 +1,88 @@
+  <app-page ttl="'Signup Page'">
+
+
+
+      <form class="" ng-submit="vm.signup()">
+          <div class="form-sub-title">Your credentials</div>
+          <p class="theme-alert " ng-show="vm.error">{{vm.error}}</p>
+
+          <section class="app-input">
+              <div class="row">
+                  <div class="small-12 columns">
+                      <div class="label-wrapper">
+                          <label for="email">Email</label>
+                      </div>
+
+                      <div class="input-wrapper">
+                          <input id="email" type="email" placeholder="someone@email.com"
+                                 ng-model="vm.creds.email" />
+                      </div>
+                  </div>
+              </div>
+          </section>
+
+          <section class="app-input">
+              <div class="row">
+                  <div class="small-12 columns">
+                      <div class="label-wrapper">
+                          <label for="password">Password</label>
+                      </div>
+
+                      <div class="input-wrapper">
+                          <input id="password" type="password"
+                                 ng-model="vm.creds.password" />
+                      </div>
+                  </div>
+              </div>
+          </section>
+
+          <!--<app-input id="'email'" label="'Email'" type="'email'" placeholder="''" ng-model="vm.creds.email"-->
+                     <!--required="true"></app-input>-->
+
+          <!--<app-input id="'pw'" label="'Password'" type="'password'" placeholder="''" ng-model="vm.creds.password"-->
+                     <!--required="true" min-length="'6'"></app-input>-->
+          <!--<app-input id="'pwc'" label="'Confirm Password'" type="'password'" placeholder="''"-->
+                     <!--ng-model="vm.creds.confirmPassword" required="true" min-length="'6'"></app-input>-->
+
+          <div class="form-sub-title">Your basic Info & Contact</div>
+
+          <section class="app-input">
+              <div class="row">
+                  <div class="small-12 columns">
+                      <div class="label-wrapper">
+                          <label for="firstName">First Name</label>
+                      </div>
+
+                      <div class="input-wrapper">
+                          <input id="firstName" type="text"
+                                 ng-model="vm.user.firstName" required />
+                      </div>
+                  </div>
+              </div>
+          </section>
+
+          <section class="app-input">
+              <div class="row">
+                  <div class="small-12 columns">
+                      <div class="label-wrapper">
+                          <label for="lastName">Last Name</label>
+                      </div>
+
+                      <div class="input-wrapper">
+                          <input id="lastName" type="text"
+                                 ng-model="vm.user.lastName" />
+                      </div>
+                  </div>
+              </div>
+          </section>
+
+
+
+
+           <app-submit txt="'Sign up'" klass="'primary buffer'"></app-submit>
+
+
+        </form>
+
+
+  </app-page>

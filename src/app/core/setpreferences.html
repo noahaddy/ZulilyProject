@@ -1,0 +1,21 @@
+  <app-page ttl="'Set preferences'">
+
+<!--{{vm.preferences}}-->
+
+      <section class="app-input" ng-repeat="pref in vm.preferences">
+          <div class="row">
+              <div class="small-12 columns">
+                  <div class="label-wrapper">
+                      <label >{{pref.$value}}
+
+                      <input ng-model="pref.selected" type="checkbox" ng-change="vm.selected(pref)"/>
+
+                      </label>
+                  </div>
+              </div>
+          </div>
+      </section>
+
+      <button class="button primary" ng-click="vm.save()">Save Preferences</button>
+
+  </app-page>

@@ -1,0 +1,54 @@
+
+.app-input {
+
+    margin-bottom: 1.2rem;
+    clear: both;
+    position: relative;
+    //font-size: $body-font-size;
+    //color: red;
+
+    .bottom-hint {
+        font-size: $mini-font-size;
+        text-align: center;
+        color: $theme-copy-secondary;
+
+    }
+
+//.input-wrapper input{
+//    font-size: $font-size-regular;
+//}
+
+    &.full-width {
+        @include desktop {
+            .input-wrapper {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.label-wrapper {
+    //margin-bottom: .3rem;
+
+    label, .text-label {
+        font-weight: 600;
+        color: lighten($theme-copy, 10%);
+        font-size: $font-size-regular;
+
+    }
+}
+
+@include desktop {
+    .label-wrapper {
+        width: 25%;
+        float: left;
+    }
+
+    .input-wrapper {
+        width: 75%; //50
+        float: left;
+    }
+
+}
+
+

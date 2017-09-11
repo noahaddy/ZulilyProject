@@ -1,0 +1,106 @@
+
+.full-width {
+  max-width: 100%;
+}
+
+.full-height{
+    height: 100%;
+}
+.full-bleed {
+  width: 100%;
+  height: 100%;
+  //background: url('./../assets/images/startimage.jpg') no-repeat;
+  //background-size: cover;
+}
+
+.mobile-block {
+  display: block;
+  width: 100%;
+
+  @include desktop {
+    display: inline-block;
+    width: auto;
+  }
+}
+
+
+.block{
+    display: block;
+}
+
+
+.inline-block{
+    display: inline-block;
+}
+
+.app-hide {
+  display: none !important;
+}
+
+.clear, .clearfix {
+  clear: both;
+}
+
+.panel {
+  padding: 1rem;
+  //background: $white;
+  //padding-left: 1rem;
+}
+
+//MARGIN STYLES TO REUSE
+.m0, .m-0{
+  margin: 0;
+}
+
+.mb0, .m-b-0{
+  margin-bottom: 0;
+}
+
+.mt0, .m-t-0{
+  margin-top: 0;
+}
+
+.ml-small, .m-l.small{
+  margin-left: 1rem;
+}
+
+//PADDINGS
+.p-b-0{
+  padding-bottom: 0 !important;
+}
+
+.padded{
+    padding: 1rem;
+}
+
+
+//SCROLLBARS
+::-webkit-scrollbar {
+    width: 5px; //8
+}
+
+::-webkit-scrollbar-track {
+    //-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    -webkit-box-shadow: none;
+    border-radius: 0;
+    background: darken($gray-light-4, 5%); //5
+
+    //background: $gray-light-2
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 0;
+    //-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+    -webkit-box-shadow: none;
+    //background: $gray-light-4;
+    //background: darken($gray-light-4, 5%);
+    //background: $theme-light-1;
+    background: darken($gray-light-1, 5%); // $gray-light-1;
+   // background: $charcoal;
+    //background: $theme;
+
+    &:hover{
+        background: darken($gray-light-4, 15%);
+    }
+
+}

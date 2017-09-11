@@ -1,0 +1,161 @@
+$title-section-width: 20%;
+
+.app-nav-bar {
+
+    //border-bottom: 5px solid $gray-light-3;
+    background: $theme-copy;
+   // height: $nav-bar-height;
+    overflow: hidden;
+    min-height: 49px;
+
+    &.fixed{
+        position: fixed;
+        width: 100%;
+        z-index: 50;
+        top: 0;
+    }
+
+    .nav-bar-middle{
+        text-align: center;
+    }
+    .nav-menu-container{
+        //margin-right: 87px;
+        display: inline-block;
+    }
+
+    .site-title {
+        @include mx-font-size(1.2rem, 1.4rem, 1.6rem);
+        color: $theme-light-1;
+        font-weight: bold;
+        letter-spacing: 2px;
+        padding-left: 1.1rem;
+
+        .title-2 {
+            //color: $gray-light-3;
+            color: $white;
+            //color: $theme-secondary;
+        }
+
+        .current-user{
+            font-size: $font-size-medium;
+            letter-spacing: 0;
+            color: $theme-secondary;
+            text-transform: uppercase;
+            font-weight: 300;
+
+        }
+
+
+
+        .env{
+            font-size: $font-size-medium;
+            letter-spacing: 0;
+            color: red;
+
+        }
+    }
+
+
+    .links-wrapper {
+        a {
+            display: inline-block;
+            //font-weight: bold;
+            text-transform: uppercase;
+            color: $gray-light-2;
+            //color: $theme-copy-secondary;
+            //outline: red solid 1px;
+            line-height: 2.5;
+            //border-top: 4px transparent solid;
+            //font-size: $body-font-size;
+            font-size: $mini-font-size;
+            letter-spacing: 1px;
+
+            &.active{
+                //background: lighten($theme-copy, 10%);
+                //color: $white;
+                color: $theme-light-1;
+                font-weight: bold;
+                //border-color: $theme;
+            }
+
+            &.right-divider{
+                //background: lighten($theme-copy, 10%);
+               // color: $white;
+                //border-color: $theme;
+                //line-height: 2.2;
+                //border-top: none;
+                border-right: 2px solid $gray-dark-3; //lighten($gray-dark-4, 20%);
+                //border-left: 2px solid lighten($theme-copy, 20%);
+                line-height: 0;
+            }
+
+
+        }
+
+
+    }
+
+
+
+    .profile-box{
+        color: $theme-copy-secondary;
+    }
+
+
+    .user-name{
+        padding-left: 1rem;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+
+    //NAV BAR RIGHT
+    .nav-bar-right{
+        .call-to-action{
+            background: $theme;
+            color: $white;
+            //border-color: $theme;
+            display: inline-block;
+            font-weight: bold;
+            text-transform: uppercase;
+            //color: $gray-light-3;
+            //outline: red solid 1px;
+            //line-height: 2.5;
+            padding: 1.3rem 1rem;
+            //border-top: 4px transparent solid;
+            //font-size: $body-font-size;
+            font-size: $mini-font-size;
+            letter-spacing: 1px;
+            vertical-align: top;
+
+            .cta-text{
+                font-weight: bold;
+            }
+
+            &:hover{
+                background: $theme-dark-1;
+            }
+
+            &.invert{
+                background: transparent;
+                color: $theme-light-1;
+            }
+
+            &.logout{
+                color: $theme-alert;
+            }
+        }
+
+        .sign-up{
+            background: $theme-success;
+        }
+
+        .plus-icon{
+            font-size: 1.3rem;
+            padding-right: .3rem;
+            line-height: .6;
+            position: relative;
+            top: 2px;
+        }
+    }
+}

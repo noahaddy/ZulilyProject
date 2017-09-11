@@ -1,0 +1,153 @@
+//NOTE: Foundation now supports hollow styles buttons
+.button, button {
+    //text-transform: uppercase;
+    font-weight: 400;
+    //@include mx-letter-spacing(0, 1px, 1px);
+    background-color: $gray-light-3;
+    font-family: $body-font-family;
+    color: $theme-copy;
+
+    &.buffer{
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+    }
+
+    &.secondary {
+        background-color: $gray-light-3;
+        color: $theme-copy;
+    }
+
+    &.primary{
+        background-color: $theme;
+        color: $white;
+        font-weight: 600;
+    }
+
+    &.warning {
+        background-color: $theme-warning;
+        color: $white;
+        font-weight: 600;
+    }
+
+    &.success {
+        background-color: $theme-success;
+        color: $white;
+        font-weight: 600;
+    }
+
+    &.danger {
+        background-color: $theme-alert;
+        color: $white;
+        font-weight: 600;
+    }
+
+    &.ghost {
+        background-color: transparent;
+        color: $white;
+        border: 2px solid $white;
+        font-weight: 600;
+    }
+
+    &.invert {
+        background-color: $white;
+        color: $theme;
+        font-weight: 600;
+    }
+
+    &.invert-alt {
+        background-color: $white;
+        color: $theme-copy;
+        font-weight: 600;
+    }
+
+    &.hollow {
+        background-color: transparent;
+        border: 2px solid $theme; //-light-1;
+        color: $theme;
+        font-weight: 600;
+    }
+
+    &.hollow-alt {
+        background-color: transparent;
+        border: 2px solid $theme; //-light-1;
+        color: $theme;
+    }
+
+    &.hollow-black {
+        background-color: transparent;
+        border: 2px solid $gray-dark-4; //-light-1;
+        color: $theme-copy;
+        font-weight: 600;
+    }
+
+    &.black {
+        background-color: $gray-dark-4;
+        //border: 2px solid $theme-light-2;
+        color: $white;
+        font-weight: 600;
+    }
+
+}
+
+[type='text'],
+[type='password'],
+[type='date'],
+[type='datetime'],
+[type='datetime-local'],
+[type='month'],
+[type='week'],
+[type='email'],
+[type='number'],
+[type='search'],
+[type='tel'],
+[type='time'],
+[type='url'],
+[type='color'],
+textarea,
+select {
+    margin-bottom: 0;
+    border: 1px solid $gray-light-3;
+    background-color: transparent;
+    font-size: $font-size-regular;
+
+
+    &:focus{
+        border: 1px solid $gray-light-2; //$black
+    }
+}
+
+select{
+    margin-bottom: 0;
+}
+
+//Schema form
+.form-group{
+    margin-bottom: 1.2rem;
+
+    label{
+        text-transform: capitalize;
+    }
+
+    .btn.btn-primary{
+       @extend .button;
+        font-size: 1rem;
+    }
+}
+
+//BADGE
+.badge{
+    border-radius: 3px;
+    padding: .1rem .3rem;
+    text-transform: uppercase;
+}
+
+//VALIDATION
+:required {
+    //border-right: 3px solid $theme-alert;
+    box-shadow: 3px 0 0 $theme-alert;
+
+
+    &:focus{
+        box-shadow: 3px 0 0 $theme-alert;
+    }
+}

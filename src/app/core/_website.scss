@@ -1,0 +1,14 @@
+
+.site-view{
+    width: 100%;
+}
+
+.site-view-wrapper{
+
+    padding-top: 49px;
+
+    @include desktop{
+        padding-top:  49px; //For when navbar is in fixed-positioning
+
+    }
+}

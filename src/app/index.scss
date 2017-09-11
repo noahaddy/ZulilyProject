@@ -1,0 +1,145 @@
+/**
+ *  If you want to override some foundation settings, you have to change values here.
+ *  The list of settings values are listed here bower_components/foundation/scss/foundation/_settings.scss
+ */
+@import 'styles/theme';
+@import 'styles/variables';
+@import 'styles/foundation-override';
+/**
+ *  The import of foundation is made manually because there is still no links of the
+ *  sass version in their bower.json...
+ */
+@import '../../bower_components/foundation-sites/scss/foundation';
+
+@include foundation-everything($flex: true);
+//@include foundation-flex-grid;
+
+@import 'styles/mixins';
+@import 'styles/typography';
+@import 'styles/layouts';
+@import 'styles/forms-and-buttons';
+@import 'styles/animations';
+
+/* Do not remove the comments below. It's the markers used by wiredep to inject
+   sass dependencies when defined in the bower.json of your dependencies */
+// bower:scss
+// endbower
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+    display: none !important;
+}
+
+html, body{
+    height: 100%;
+}
+
+body{
+    font-size: $font-size-regular;
+}
+
+svg {
+    max-width: 100%;
+}
+
+//HELPER CLASSES FOR ELEMENT VISUALIZATION
+.o, .--o {
+    outline: red solid 1px;
+}
+
+.oo, .--oo {
+    outline: red solid 5px;
+}
+
+.ot, .--ot {
+    outline: $theme solid 1px;
+}
+
+.ob, .--ob {
+      outline: $black solid 1px;
+}
+
+.og, .--og {
+    outline: green solid 1px;
+}
+
+.bgr{
+     background: red;
+ }
+
+.bgg{
+    background: lightgray;
+}
+
+.redheart {
+
+}
+
+//FEEDBACK BUTTON
+
+.feedback-container {
+    position: absolute;
+    right: 0;
+    //bottom: 169px;
+    bottom: 0;
+    z-index: 100;
+    margin-bottom: 0;
+    display: none;
+
+    @include desktop {
+        position: fixed;
+    }
+
+    .feedback-button {
+        color: $white;
+        background-color: $theme-secondary;
+        margin-bottom: 0;
+    }
+
+    //CURRENT ENVIRONMENT
+    .current-environment {
+        //color: $white;
+        //background-color: $theme-alert;
+        margin-bottom: 0;
+        margin-right: 5px;
+
+        display: none;
+    }
+}
+
+#environment-info{
+    background: $theme-alert;
+
+    color: $white;
+    font-weight: bold;
+
+    h4{
+        font-weight: bold;
+    }
+
+    button{
+        background: none;
+    }
+}
+
+/* Do not remove the comments below. It's the markers used by gulp-inject to inject
+   all your sass files automatically */
+// injector
+// endinjector
+
+
+.beta-tag{
+    font-size: .5rem;
+    background: yellow;
+    font-weight: bold;
+    color: $black; //$white;
+    padding: .05rem .2rem;
+    border: 1px solid $black;
+    //position: relative;
+    //bottom: 3px;
+    //left: 5px;
+
+    position: fixed;
+    //top: -3px;
+    left: 16px;
+    bottom: 0;
+}
