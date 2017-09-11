@@ -2,8 +2,8 @@
 
     <app-nav-bar klass="'fixed'" links="vm.links">
         <nav-bar-right>
-            <a class="nav-item call-to-action show-for-large" href="#/app/{{$root.currentCompany.key}}/dashboard" ng-if="$root.currentUser">
-                <span class="cta-text">DASHBOARD</span>
+            <a class="nav-item call-to-action show-for-large" href="#/app/updatepreferences" ng-if="$root.currentUser">
+                <span class="cta-text">Preferences</span>
             </a>
 
             <a class="nav-item call-to-action invert logout show-for-large" href="#/logout"  ng-show="$root.currentUser">

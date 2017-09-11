@@ -6,7 +6,7 @@
         .controller('LoginController', controller);
 
     /** @ngInject */
-    function controller(AuthService, $firebaseArray, $state) {
+    function controller($scope, AuthService, $firebaseArray, $state) {
         var vm = this;
 
         init();
@@ -28,7 +28,7 @@
                           .then(function(data) {
                               //if user has preferences
                               if(data.length > 0){
-                                  $state.go("app.home")
+                                  $state.go("app.home");
                               }else{
                                   //Force user to update prefs
                                   $state.go("app.setpreferences");
@@ -44,9 +44,9 @@
                         //     .then(function(){
                         //         EventBus.emit(EventBus.events.auth.login);
                         //
-                        //         Nav.dashboard();
                         //        // $scope.$apply();
                         //     });
+                      //$scope.$apply();
 
 
                 })
