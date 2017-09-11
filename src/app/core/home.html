@@ -9,52 +9,36 @@
 >
 </app-herostacked>
 
-<section class="app-section padded">
+<app-section ttl="'Men\'s Collection'" desc="'Fresh. Chic. Cool'" klass="'bg-gray-light-3'">
 <div class="row">
-    <div class="column small-12 medium-4">
-       <app-product></app-product>
-    </div>
-    <div class="column small-12 medium-4">
-        <app-product></app-product>
-    </div>
-    <div class="column small-12 medium-4">
-        <app-product></app-product>
+    <div class="column small-12 medium-4" ng-repeat="product in vm.men">
+       <app-product ttl="product.title" image="product.image" price="product.price"></app-product>
     </div>
 
 </div>
-</section>
+</app-section>
 
 
-<section class="app-section padded">
+<app-section ttl="'Women\'s Collection'" desc="'Fresh. Chic. Cool'" klass="''">
 <div class="row">
-    <div class="column small-12 medium-4">
-        <app-product></app-product>
-    </div>
-    <div class="column small-12 medium-4">
-        <app-product></app-product>
-    </div>
-    <div class="column small-12 medium-4">
-        <app-product></app-product>
+    <div class="column small-12 medium-4" ng-repeat="product in vm.women">
+        <app-product ttl="product.title" image="product.image" price="product.price"></app-product>
     </div>
 
 </div>
-</section>
+</app-section>
 
 
-<section class="app-section padded">
+<app-section ttl="'Hot New Shoe Collection'" desc="'Fresh. Chic. Cool'" klass="'bg-gray-light'">
 <div class="row">
-    <div class="column small-12 medium-4">
-        <app-product></app-product>
-    </div>
-    <div class="column small-12 medium-4">
-        <app-product></app-product>
-    </div>
-    <div class="column small-12 medium-4">
-        <app-product></app-product>
+    <div class="column small-12 medium-4" ng-repeat="product in vm.shoes">
+        <app-product ttl="product.title" image="product.image" price="product.price"></app-product>
     </div>
 
 </div>
-</section>
+</app-section>
+
+
 
 
 

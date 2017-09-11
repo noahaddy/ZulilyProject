@@ -6,7 +6,7 @@
         .component('appProduct', {
             templateUrl: 'app/core/components/Product/product.component.html',
             bindings: {
-                title: "=",
+                ttl: "=",
                 price: "=",
                 image: "=",
                 category: "=",

@@ -6,12 +6,16 @@
         .controller('HomeController', controller);
 
     /** @ngInject */
-    function controller($timeout) {
+    function controller(ProductService) {
         var vm = this;
 
         init();
 
         function init() {
+
+            vm.men = ProductService.getProductsByCategory("men");
+            vm.women = ProductService.getProductsByCategory("women");
+            vm.shoes = ProductService.getProductsByCategory("shoes");
 
         }
 

@@ -18,6 +18,7 @@
         var rootRef = firebase.database().ref();
 
         var productCategoriesRef = rootRef.child("PRODUCT_CATEGORIES");
+        var productsRef = rootRef.child("PRODUCTS");
         var usersRef = rootRef.child("USERS");
 
 
@@ -33,6 +34,9 @@
             productCategories: $firebaseArray(productCategoriesRef),
             userInfo: function(uid){
                 return $firebaseObject(usersRef.child(uid));
+            },
+            productsByCategory: function(category){
+                return $firebaseArray(productsRef.child(category));
             }
 
         };
