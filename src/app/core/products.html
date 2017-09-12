@@ -1,0 +1,29 @@
+
+
+<app-herostacked
+        intro="'Products by Category'"
+        ttl="'Products for ' + vm.category"
+        klass="'bg-theme-secondary dark-theme'" ,
+
+>
+</app-herostacked>
+
+
+<app-section
+
+    ttl="'All ' + vm.category + ' Products'"
+    klass="''"
+>
+    <div class="row">
+        <div class="column small-12 medium-4" ng-repeat="product in vm.products">
+            <app-product ttl="product.title" image="product.image" price="product.price"></app-product>
+        </div>
+
+    </div>
+</app-section>
+
+
+
+
+</app-site-page>
+

@@ -1,0 +1,30 @@
+<section class="app-section {{klass}}"
+         ng-class="{'text-center featured' : featured, 'has-image': image, 'has-light-text' : lighttext }">
+    <div class="baby-header text-center " ng-if="intro">
+        {{intro}}
+    </div>
+
+    <div class="row">
+        <div class="small-12  columns">
+            <div class="text-wrapper">
+
+                <!--Section Title-->
+                <div class="section-title " ng-if="ttl">{{ttl}}</div>
+                <div class="section-sub-title" ng-if="subtitle">{{subtitle}}</div>
+
+
+                <div class="desc" ng-if="desc">{{desc}}</div>
+                <a href="" class="button {{ctaclass}}" ng-show="cta">{{cta}}</a>
+            </div>
+
+        </div>
+
+
+
+        <div class="small-12  columns ">
+            <div ng-transclude></div>
+
+        </div>
+
+    </div>
+</section>

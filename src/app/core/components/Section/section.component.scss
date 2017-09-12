@@ -1,0 +1,24 @@
+
+.app-section {
+    margin: 3rem 0;
+
+    .section-title {
+        font-weight: 300;
+        margin-bottom: .5rem;
+        //letter-spacing: 2px;
+        text-transform: capitalize;
+    }
+
+    .section-sub-title {
+        margin-bottom: 1rem;
+        color: $theme-copy-secondary;
+    }
+
+    &[class*="bg-"] {
+        padding: 3rem 0;
+        margin: 0;
+    }
+
+
+
+}
