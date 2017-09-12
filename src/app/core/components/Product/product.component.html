@@ -3,7 +3,9 @@
         <img ng-src="{{$ctrl.image}}" alt="">
     </div>
 
-    <div class="title">{{$ctrl.ttl}}</div>
+    <div class="title">{{$ctrl.ttl}} <span class="price">{{$ctrl.price}}</span></div>
 
-    <div class="price" >{{$ctrl.price}}</div>
+    <div class="buy-now">
+        <button class="button small warning">Buy now</button>
+    </div>
 </section>

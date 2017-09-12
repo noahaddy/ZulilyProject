@@ -1,45 +1,39 @@
+
+
 <app-herostacked
         intro="'By Noah Addy'"
         ttl="'New Season. New Collection.'"
         subtitle="'Browse our Fall Catalog'"
-        xcta = "'Call to Action'",
-        xctalink = "'mailto:lorem@ipsum.com'"
+        cta = "'Sign up for Great Deals'",
+        ctalink = "'#/app/signup'"
+        ctaklass = "'invertx success'",
         klass="'bg-theme dark-theme'" ,
 
 >
 </app-herostacked>
 
-<app-section ttl="'Men\'s Collection'" desc="'Fresh. Chic. Cool'" klass="'bg-gray-light-3'">
-<div class="row">
-    <div class="column small-12 medium-4" ng-repeat="product in vm.men">
-       <app-product ttl="product.title" image="product.image" price="product.price"></app-product>
-    </div>
 
-</div>
+<app-section
+    ng-repeat = "(productCategory, products) in vm.prods"
+    ttl="'New ' + productCategory + ' Collection'"
+    klass="'bg-gray-light'"
+>
+    <div class="row">
+        <div class="column small-12 medium-4" ng-repeat="product in products">
+            <app-product ttl="product.title" image="product.image" price="product.price"></app-product>
+        </div>
+
+    </div>
 </app-section>
 
 
-<app-section ttl="'Women\'s Collection'" desc="'Fresh. Chic. Cool'" klass="''">
-<div class="row">
-    <div class="column small-12 medium-4" ng-repeat="product in vm.women">
-        <app-product ttl="product.title" image="product.image" price="product.price"></app-product>
-    </div>
+<app-herostacked
+    ttl="'Thank you for Visiting'"
+    subtitle="'Designed & Coded by Noah Addy'"
+    klass="'bg-theme-secondary dark-theme'" ,
 
-</div>
-</app-section>
-
-
-<app-section ttl="'Hot New Shoe Collection'" desc="'Fresh. Chic. Cool'" klass="'bg-gray-light'">
-<div class="row">
-    <div class="column small-12 medium-4" ng-repeat="product in vm.shoes">
-        <app-product ttl="product.title" image="product.image" price="product.price"></app-product>
-    </div>
-
-</div>
-</app-section>
-
-
-
+>
+</app-herostacked>
 
 
 </app-site-page>

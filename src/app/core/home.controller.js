@@ -13,11 +13,11 @@
 
         function init() {
 
-            vm.men = ProductService.getProductsByCategory("men");
-            vm.women = ProductService.getProductsByCategory("women");
-            vm.shoes = ProductService.getProductsByCategory("shoes");
+            vm.prods = ProductService.getProductsByUserPreferences();
 
         }
+
+
 
     }
 })();
