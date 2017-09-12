@@ -6,7 +6,7 @@
         <div class="title title-2 mobile-legible" ng-show="ttl2">{{ttl2 }}</div>
         <div class="sub-title" ng-show="subtitle">{{ subtitle }}</div>
         <p class="text " ng-show="text">{{text}}</p>
-        <a class=" button cta primary {{ctaklass}}" ng-href="{{ctalink}}"  ng-show="cta">{{cta}} <span
+        <a class=" button cta primary {{ctaklass}}" ng-href="{{ctalink}}"  ng-show="cta && !$root.currentUser">{{cta}} <span
             class="cta-arrow">&raquo;</span></a>
     </div>
 

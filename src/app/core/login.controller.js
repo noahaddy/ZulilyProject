@@ -6,7 +6,7 @@
         .controller('LoginController', controller);
 
     /** @ngInject */
-    function controller($scope, AuthService, $firebaseArray, $state) {
+    function controller($scope, AuthService, $firebaseArray, $state, Startup) {
         var vm = this;
 
         init();
@@ -33,6 +33,7 @@
                                   //Force user to update prefs
                                   $state.go("app.setpreferences");
                               }
+                              Startup.init();
 
                           })
                           .catch(function(error) {
