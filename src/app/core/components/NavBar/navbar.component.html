@@ -17,19 +17,22 @@
         <section class="column  nav-bar-middle show-for-large">
             <div class="nav-menu-container">
                     <ul class="links-wrapper menu ">
-                        <li xng-if="link.url"  ng-repeat="link in $ctrl.links" class="">
-                            <a  ui-sref="{{link.url}}"
-                                ui-sref-active="{'active': 'app.' + link.entity }"
-                                class="nav-item {{link.klass}}"
-                                data-toggle="{{link.toggle}}"
-                            >{{link.title2}}</a>
 
-
-                        </li>
                         <li>
                             <a class="nav-item call-to-action " ng-href="#/home" >
                                 <span class="cta-text">Home</span>
                             </a>
+                        </li>
+
+                        <!--Product Categories-->
+                        <li   ng-repeat="link in $ctrl.links" class="">
+                            <a  ng-href="#/app/products/{{link.$id}}"
+                                ui-sref-active="{'active': 'app.' + link.$id }"
+                                class="nav-item call-to-action "
+
+                            >{{link.$value}}</a>
+
+
                         </li>
                     </ul>
             </div>

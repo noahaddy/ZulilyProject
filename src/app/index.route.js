@@ -47,6 +47,12 @@
                 controller: 'SetPreferencesController',
                 controllerAs: 'vm'
             })
+            .state('app.products', {
+                url: '/products/:category',
+                templateUrl: 'app/core/products.html',
+                controller: 'ProductsController',
+                controllerAs: 'vm'
+            })
             .state('app.logout', {
                 url: '^/logout',
                 controller: 'LogoutController',

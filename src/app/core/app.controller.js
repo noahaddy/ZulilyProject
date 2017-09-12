@@ -6,20 +6,15 @@
         .controller('AppController', controller);
 
     /** @ngInject */
-    function controller($scope, $timeout) {
+    function controller(FireBaseDataService) {
         var vm = this;
 
         init();
 
         function init() {
-
+            vm.links = FireBaseDataService.productCategories;
 
         }
-
-        $timeout(function(){
-
-        });
-
 
     }
 
